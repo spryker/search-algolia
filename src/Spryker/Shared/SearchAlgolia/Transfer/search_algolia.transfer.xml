@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="Money">
+        <property name="amount" type="string"/>
+    </transfer>
+
+    <transfer name="Store">
+        <property name="name" type="string"/>
+    </transfer>
+
+    <transfer name="SearchDocument">
+        <property name="id" type="string"/>
+        <property name="searchContext" type="SearchContext"/>
+        <property name="data" type="array" singular="data"/>
+    </transfer>
+
+    <transfer name="SearchConnectionResponse">
+        <property name="isSuccessfull" type="bool"/>
+        <property name="rawResponse" type="array" singular="rawResponse"/>
+    </transfer>
+
+    <transfer name="SearchContext">
+        <property name="algoliaSearchContext" type="AlgoliaSearchContext"/>
+        <property name="sourceIdentifier" type="string"/>
+    </transfer>
+
+    <transfer name="AlgoliaSearchContext">
+        <property name="indexName" type="string"/>
+        <property name="typeName" type="string"/>
+    </transfer>
+
+    <transfer name="AlgoliaRequestOptions">
+        <property name="query" type="string"/>
+        <property name="attributesToRetrieve" type="array"/>
+    </transfer>
+
+    <transfer name="AlgoliaBrowseParamters">
+        <property name="query" type="string"/>
+        <property name="attributesToRetrieve" type="array"/>
+    </transfer>
+
+    <!-- Will replace the Elastica\ResultSet -->
+    <transfer name="SearchResult">
+        <property name="hits" type="int"/>
+        <property name="results" type="array"/>
+        <property name="suggestions" type="array"/>
+        <property name="facets" type="SearchResultFacet[]" singular="facet"/>
+    </transfer>
+
+    <transfer name="SearchResultFacet">
+        <property name="name" type="string"/>
+        <property name="searchResultFacetData" type="SearchResultFacetData[]"/>
+        <property name="count" type="int"/>
+        <property name="statistics" type="array"/>
+    </transfer>
+
+    <transfer name="SearchResultFacetData">
+        <property name="name" type="string"/>
+        <property name="value" type="string"/>
+        <property name="count" type="int"/>
+    </transfer>
+
+</transfers>
