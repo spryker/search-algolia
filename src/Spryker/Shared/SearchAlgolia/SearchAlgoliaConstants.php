@@ -18,6 +18,8 @@ interface SearchAlgoliaConstants
      * - @see https://www.algolia.com/doc/api-client/getting-started/request-options/
      *
      * @api
+     *
+     * @var string
      */
     public const EXTRA = 'SEARCH_ALGOLIA:REQUEST_OPTIONS';
 
@@ -26,6 +28,8 @@ interface SearchAlgoliaConstants
      * - Defines prefix for Algolia indexes.
      *
      * @api
+     *
+     * @var string
      */
     public const INDEX_PREFIX = 'SEARCH_ALGOLIA:INDEX_PREFIX';
 
@@ -35,6 +39,8 @@ interface SearchAlgoliaConstants
      * - @see https://www.algolia.com/apps/02324RT7JY/api-keys/all
      *
      * @api
+     *
+     * @var string
      */
     public const APPLICATION_ID = 'SEARCH_ALGOLIA:APPLICATION_ID';
 
@@ -44,6 +50,8 @@ interface SearchAlgoliaConstants
      * - @see https://www.algolia.com/apps/02324RT7JY/api-keys/all
      *
      * @api
+     *
+     * @var string
      */
     public const SEARCH_API_KEY = 'SEARCH_ALGOLIA:SEARCH_API_KEY';
 
@@ -53,6 +61,8 @@ interface SearchAlgoliaConstants
      * - @see https://www.algolia.com/apps/02324RT7JY/api-keys/all
      *
      * @api
+     *
+     * @var string
      */
     public const WRITE_API_KEY = 'SEARCH_ALGOLIA:WRITE_API_KEY';
 
@@ -62,6 +72,8 @@ interface SearchAlgoliaConstants
      * - @see https://www.algolia.com/apps/02324RT7JY/api-keys/all
      *
      * @api
+     *
+     * @var string
      */
     public const ADMIN_API_KEY = 'SEARCH_ALGOLIA:ADMIN_API_KEY';
 }

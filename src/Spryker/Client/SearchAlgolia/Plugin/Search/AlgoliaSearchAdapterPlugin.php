@@ -22,8 +22,16 @@ use SprykerTest\Client\Search\Helper\InMemorySearchPluginInterface;
  */
 class AlgoliaSearchAdapterPlugin extends AbstractPlugin implements SearchAdapterPluginInterface, ConnectionCheckerAdapterPluginInterface, InMemorySearchPluginInterface
 {
+    /**
+     * @var string
+     */
     protected const NAME = 'algolia';
 
+    /**
+     * @param string $source
+     *
+     * @return array
+     */
     public function getAllKeys(string $source): array
     {
         return [];

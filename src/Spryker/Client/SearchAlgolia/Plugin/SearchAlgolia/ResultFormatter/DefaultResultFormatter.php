@@ -14,6 +14,9 @@ use Algolia\AlgoliaSearch\Iterators\ObjectIterator as AlgoliaObjectIterator;
  */
 class DefaultResultFormatter extends AbstractAlgoliaSearchResultFormatterPlugin
 {
+    /**
+     * @var string
+     */
     protected const NAME = 'default';
 
     /**

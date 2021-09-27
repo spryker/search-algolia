@@ -12,13 +12,30 @@ use Spryker\Shared\Kernel\AbstractSharedConfig;
 class SearchAlgoliaConfig extends AbstractSharedConfig
 {
     /**
-     * Available facet types
+     * Available facet types.
+     *
+     * @var string
      */
     public const FACET_TYPE_ENUMERATION = 'enumeration';
+
+    /**
+     * @var string
+     */
     public const FACET_TYPE_RANGE = 'range';
+
+    /**
+     * @var string
+     */
     public const FACET_TYPE_PRICE_RANGE = 'price-range';
+
+    /**
+     * @var string
+     */
     public const FACET_TYPE_CATEGORY = 'category';
 
+    /**
+     * @var string[]
+     */
     protected const SUPPORTED_SOURCE_IDENTIFIERS = [];
 
     /**
