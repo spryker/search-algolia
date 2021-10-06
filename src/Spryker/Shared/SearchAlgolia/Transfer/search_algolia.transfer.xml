@@ -32,27 +32,27 @@
 
     <transfer name="AlgoliaRequestOptions">
         <property name="query" type="string"/>
-        <property name="attributesToRetrieve" type="array"/>
+        <property name="attributesToRetrieve" type="array" singular="attributeToRetrieve"/>
     </transfer>
 
     <transfer name="AlgoliaBrowseParamters">
         <property name="query" type="string"/>
-        <property name="attributesToRetrieve" type="array"/>
+        <property name="attributesToRetrieve" type="array" singular="attributeToRetrieve"/>
     </transfer>
 
     <!-- Will replace the Elastica\ResultSet -->
     <transfer name="SearchResult">
         <property name="hits" type="int"/>
-        <property name="results" type="array"/>
-        <property name="suggestions" type="array"/>
+        <property name="results" type="array" singular="result"/>
+        <property name="suggestions" type="array" singular="suggestion"/>
         <property name="facets" type="SearchResultFacet[]" singular="facet"/>
     </transfer>
 
     <transfer name="SearchResultFacet">
         <property name="name" type="string"/>
-        <property name="searchResultFacetData" type="SearchResultFacetData[]"/>
+        <property name="searchResultFacetData" type="SearchResultFacetData[]" singular="searchResultFacetDatum"/>
         <property name="count" type="int"/>
-        <property name="statistics" type="array"/>
+        <property name="statistics" type="array" singular="statistic"/>
     </transfer>
 
     <transfer name="SearchResultFacetData">
