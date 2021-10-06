@@ -37,11 +37,8 @@ class DocumentWriter implements DocumentWriterInterface
             ->getAlgoliaSearchContextOrFail()
             ->getIndexNameOrFail();
 
-        $index = $this->algoliaClient->initIndex($indexName);
-
-        $data = $searchDocumentTransfer->getData();
-        $data['id'] = $searchDocumentTransfer->getIdOrFail();
-        $index->saveObject($searchDocumentTransfer->getData(), ['objectIDKey' => 'id']);
+        $this->algoliaClient->initIndex($indexName)
+            ->saveObject($searchDocumentTransfer->getData(), ['objectIDKey' => 'id']);
 
         return true; // TODO: return based on response
     }
@@ -64,13 +61,17 @@ class DocumentWriter implements DocumentWriterInterface
             $objects[] = $data;
         }
 
+        if (!$searchDocumentTransfer) {
+            return false;
+        }
+
         $indexName = $searchDocumentTransfer
             ->getSearchContextOrFail()
             ->getAlgoliaSearchContextOrFail()
             ->getIndexNameOrFail();
 
-        $index = $this->algoliaClient->initIndex($indexName);
-        $index->saveObjects($objects, ['objectIDKey' => 'id']);
+        $this->algoliaClient->initIndex($indexName)
+            ->saveObjects($objects, ['objectIDKey' => 'id']);
 
         return true; // TODO: return based on response
     }
@@ -87,8 +88,8 @@ class DocumentWriter implements DocumentWriterInterface
             ->getAlgoliaSearchContextOrFail()
             ->getIndexNameOrFail();
 
-        $index = $this->algoliaClient->initIndex($indexName);
-        $index->deleteObject($searchDocumentTransfer->getId());
+        $this->algoliaClient->initIndex($indexName)
+            ->deleteObject($searchDocumentTransfer->getId());
 
         return true; // TODO return based on response
     }
@@ -105,13 +106,17 @@ class DocumentWriter implements DocumentWriterInterface
             $objectIds[] = $searchDocumentTransfer->getId();
         }
 
+        if (!$searchDocumentTransfer) {
+            return false;
+        }
+
         $indexName = $searchDocumentTransfer
             ->getSearchContextOrFail()
             ->getAlgoliaSearchContextOrFail()
             ->getIndexNameOrFail();
 
-        $index = $this->algoliaClient->initIndex($indexName);
-        $index->deleteObjects($objectIds);
+        $this->algoliaClient->initIndex($indexName)
+            ->deleteObjects($objectIds);
 
         return true; // TODO return based on response
     }

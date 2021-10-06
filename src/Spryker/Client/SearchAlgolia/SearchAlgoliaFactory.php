@@ -25,10 +25,13 @@ use Spryker\Client\SearchAlgolia\SearchContextExpander\SearchContextExpanderInte
 use Spryker\Client\SearchAlgolia\Writer\DocumentWriter;
 use Spryker\Client\SearchAlgolia\Writer\DocumentWriterInterface;
 
+/**
+ * @method \Spryker\Client\SearchAlgolia\SearchAlgoliaConfig getConfig()
+ */
 class SearchAlgoliaFactory extends AbstractFactory
 {
     /**
-     * @return Algolia\AlgoliaSearch\SearchClient
+     * @return \Algolia\AlgoliaSearch\SearchClient
      */
     public function createAlgoliaSearchSearchClient(): SearchClient
     {
@@ -41,7 +44,7 @@ class SearchAlgoliaFactory extends AbstractFactory
     }
 
     /**
-     * @return Algolia\AlgoliaSearch\SearchClient
+     * @return \Algolia\AlgoliaSearch\SearchClient
      */
     public function createAlgoliaSearchWriteClient(): SearchClient
     {
@@ -54,7 +57,7 @@ class SearchAlgoliaFactory extends AbstractFactory
     }
 
     /**
-     * @return Algolia\AlgoliaSearch\SearchClient
+     * @return \Algolia\AlgoliaSearch\SearchClient
      */
     public function createAlgoliaSearchAdminClient(): SearchClient
     {

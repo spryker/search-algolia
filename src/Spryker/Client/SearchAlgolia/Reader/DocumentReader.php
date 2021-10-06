@@ -33,8 +33,8 @@ class DocumentReader implements DocumentReaderInterface
     public function readDocument(SearchDocumentTransfer $searchDocumentTransfer): SearchDocumentTransfer
     {
         $indexName = $searchDocumentTransfer
-            ->getSearchContext()
-            ->getAlgoliaSearchContext()
+            ->getSearchContextOrFail()
+            ->getAlgoliaSearchContextOrFail()
             ->getIndexName();
 
         $index = $this->algoliaClient->initIndex($indexName);

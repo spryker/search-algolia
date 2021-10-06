@@ -50,7 +50,7 @@ abstract class AbstractAlgoliaSearchResultFormatterPlugin extends AbstractPlugin
     }
 
     /**
-     * @param \Elastica\ResultSet $searchResult
+     * @param \Algolia\AlgoliaSearch\Iterators\ObjectIterator $searchResult
      * @param array $requestParameters
      *
      * @return mixed

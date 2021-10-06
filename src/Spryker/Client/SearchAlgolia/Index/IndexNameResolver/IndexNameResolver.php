@@ -54,9 +54,9 @@ class IndexNameResolver implements IndexNameResolverInterface
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    protected function getStoreName(): string
+    protected function getStoreName(): ?string
     {
         if (static::$storeName === null) {
             $storeTransfer = $this->storeClient->getCurrentStore();

@@ -33,7 +33,7 @@ class SearchContextExpander implements SearchContextExpanderInterface
      */
     public function expandSearchContext(SearchContextTransfer $searchContextTransfer): SearchContextTransfer
     {
-        $sourceIdentifier = $searchContextTransfer->requireSourceIdentifier()->getSourceIdentifier();
+        $sourceIdentifier = $searchContextTransfer->requireSourceIdentifier()->getSourceIdentifierOrFail();
         $indexName = $this->indexNameResolver->resolve($sourceIdentifier);
         $elasticsearchSearchContextTransfer = $this->createAlgoliaSearchContext($indexName, $sourceIdentifier);
         $searchContextTransfer->setAlgoliaSearchContext($elasticsearchSearchContextTransfer);

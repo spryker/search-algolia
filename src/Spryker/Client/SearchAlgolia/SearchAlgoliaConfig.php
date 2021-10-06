@@ -9,6 +9,9 @@ namespace Spryker\Client\SearchAlgolia;
 
 use Spryker\Client\Kernel\AbstractBundleConfig;
 
+/**
+ * @method \Spryker\Shared\SearchAlgolia\SearchAlgoliaConfig getSharedConfig()
+ */
 class SearchAlgoliaConfig extends AbstractBundleConfig
 {
     /**
@@ -19,17 +22,7 @@ class SearchAlgoliaConfig extends AbstractBundleConfig
     /**
      * @api
      *
-     * @return array
-     */
-    public function getClientConfig(): array
-    {
-        return $this->getSharedConfig()->getClientConfig();
-    }
-
-    /**
-     * @api
-     *
-     * @return array
+     * @return string
      */
     public function getApplicationId(): string
     {
@@ -39,7 +32,7 @@ class SearchAlgoliaConfig extends AbstractBundleConfig
     /**
      * @api
      *
-     * @return array
+     * @return string
      */
     public function getAdminApiKey(): string
     {
@@ -49,7 +42,7 @@ class SearchAlgoliaConfig extends AbstractBundleConfig
     /**
      * @api
      *
-     * @return array
+     * @return string
      */
     public function getSearchApiKey(): string
     {
@@ -59,7 +52,7 @@ class SearchAlgoliaConfig extends AbstractBundleConfig
     /**
      * @api
      *
-     * @return array
+     * @return string
      */
     public function getWriteApiKey(): string
     {
