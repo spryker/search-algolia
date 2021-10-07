@@ -22,7 +22,13 @@
 
     <transfer name="SearchContext">
         <property name="algoliaSearchContext" type="AlgoliaSearchContext"/>
+        <property name="elasticsearchContext" type="ElasticsearchSearchContext"/>
         <property name="sourceIdentifier" type="string"/>
+    </transfer>
+
+    <transfer name="ElasticsearchSearchContext">
+        <property name="indexName" type="string"/>
+        <property name="typeName" type="string"/>
     </transfer>
 
     <transfer name="AlgoliaSearchContext">
@@ -50,7 +56,7 @@
 
     <transfer name="SearchResultFacet">
         <property name="name" type="string"/>
-        <property name="searchResultFacetData" type="SearchResultFacetData[]" singular="searchResultFacetDatum"/>
+        <property name="searchResultFacetData" type="SearchResultFacetData[]" singular="searchResultFacetData"/>
         <property name="count" type="int"/>
         <property name="statistics" type="array" singular="statistic"/>
     </transfer>

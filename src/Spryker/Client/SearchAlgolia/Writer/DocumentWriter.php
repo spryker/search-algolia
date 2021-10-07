@@ -61,7 +61,7 @@ class DocumentWriter implements DocumentWriterInterface
             $objects[] = $data;
         }
 
-        if (!$searchDocumentTransfer) {
+        if (!isset($searchDocumentTransfer)) {
             return false;
         }
 
@@ -106,7 +106,7 @@ class DocumentWriter implements DocumentWriterInterface
             $objectIds[] = $searchDocumentTransfer->getId();
         }
 
-        if (!$searchDocumentTransfer) {
+        if (!isset($searchDocumentTransfer)) {
             return false;
         }
 

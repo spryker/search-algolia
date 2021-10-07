@@ -19,7 +19,7 @@ abstract class AbstractAlgoliaSearchResultFormatterPlugin extends AbstractPlugin
      *
      * @api
      *
-     * @param \Elastica\ResultSet $searchResult
+     * @param \Elastica\ResultSet|\Algolia\AlgoliaSearch\Iterators\ObjectIterator $searchResult
      * @param array $requestParameters
      *
      * @return mixed
@@ -27,6 +27,7 @@ abstract class AbstractAlgoliaSearchResultFormatterPlugin extends AbstractPlugin
     public function formatResult($searchResult, array $requestParameters = [])
     {
         $this->assertResultType($searchResult);
+        /** @var \Algolia\AlgoliaSearch\Iterators\ObjectIterator $searchResult */
 
         return $this->formatSearchResult($searchResult, $requestParameters);
     }
